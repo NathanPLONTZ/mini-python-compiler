@@ -1,0 +1,61 @@
+# --- Build output ---------------------------------------------------------
+out/
+bin/
+build/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# --- IDE / workspace ------------------------------------------------------
+# Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+.recommenders/
+*.launch
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+
+# --- Local dependencies ---------------------------------------------------
+lib/
+
+# --- Logs and crash dumps -------------------------------------------------
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# --- Generated analysis output --------------------------------------------
+# Trees, token dumps and LL(1) tables redirected to a file while testing.
+*.out
+output/
+dumps/
+
+# --- Course documents (not redistributed) ---------------------------------
+# Assignment brief, activity report and slides are not part of this repository.
+*.odt
+*.odp
+*.docx
+*.pptx
+sujet*.pdf
+rapport*.pdf
+compte_rendu*
+
+# --- OS noise -------------------------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store

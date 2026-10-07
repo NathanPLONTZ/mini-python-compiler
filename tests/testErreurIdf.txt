@@ -1,0 +1,11 @@
+x=3
+
+
+
+1anthan=3
+nat_an=3
+nath@n=3
+if(x==  3):
+    print("x is 3")
+else:
+    print("x is not 3")

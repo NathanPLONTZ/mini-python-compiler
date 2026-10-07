@@ -1,0 +1,29 @@
+#commentaire
+def fonction1(a):
+    return -a
+
+def fonction2(a,b):
+
+    if(a!= (b%2)):
+      print(fonction1(a))
+    else:
+         if(a and (b<0)):
+         
+             print(not(a))
+             
+             a=1
+         else:
+            print((True))
+
+
+#commentaire
+for i in [1, 2, 3]:
+    if i >= 1:
+        print("Valeur superieure a 1")
+    else:
+        print("Valeur egale a 1")
+
+x = 10
+y = x // (2+3)
+z= fonction2(x,y)
+w=y+z

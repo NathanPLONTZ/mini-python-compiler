@@ -1,0 +1,11 @@
+# Demander un nombre à l'utilisateur
+nombre = (("Entrez un nombre : "))
+x=3
+# Vérifier si le nombre est pair ou impair
+if nombre == (10 // 5):
+    print("{nombre} est un nombre pair.")
+else:
+    print("{nombre} est un nombre impair.")
+
+# Afficher un message de fin
+print("Merci d'avoir utilise le programme !")

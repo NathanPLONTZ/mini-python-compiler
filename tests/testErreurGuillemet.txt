@@ -1,0 +1,4 @@
+x="ok"
+x="ok
+y=3
+xart= " egr\n ff \""

@@ -1,0 +1,8 @@
+n@th@n=4
+x=012
+@nathan
+x=3
+y=x/3
+y=t//3
+y!=x
+y!pp

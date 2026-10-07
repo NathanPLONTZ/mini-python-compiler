@@ -1,0 +1,86 @@
+file -> NEWLINE def_etoile stmt stmt_etoile EOF .
+file -> def_etoile stmt stmt_etoile EOF .
+
+def_etoile -> def def_etoile .
+def_etoile -> .
+
+stmt_etoile -> stmt stmt_etoile .
+stmt_etoile -> .
+
+def -> Def ident "(" arg ")" ":" suite .
+
+arg -> ident next_arg .
+arg -> .
+
+next_arg -> "," ident next_arg .
+next_arg -> .
+
+suite -> simple_stmt NEWLINE .
+suite -> NEWLINE BEGIN stmt stmt_etoile END .
+
+stmt -> simple_stmt NEWLINE .
+stmt -> if expr_init ":" suite Else .
+stmt -> for ident in expr ":" suite .
+
+Else -> else ":" suite .
+Else -> .
+
+simple_stmt -> return expr .
+simple_stmt -> print expr .
+simple_stmt -> expr_stmt affect .
+
+affect -> . 
+affect -> "=" expr_init .
+
+expr_init -> expr expr_droite .
+
+expr_stmt -> ident ident_fact .
+expr_stmt -> "-" expr_init "[" expr_init "]" .
+expr_stmt -> const "[" expr_init "]" .
+expr_stmt -> not expr_init "[" expr_init "]" . 
+expr_stmt -> "[" expr_etoile_init "]" "[" expr_init "]" .
+expr_stmt -> "(" expr_init ")" "[" expr_init "]" .
+
+ident_fact -> .
+ident_fact -> binop expr expr_prime .
+ident_fact -> "(" expr_etoile_init ")" expr_prime .
+
+ident_expr -> .
+ident_expr -> "(" expr_etoile_init ")"  .
+
+expr_droite -> expr_prime expr_droite .
+expr_droite -> .
+
+expr -> const .
+expr -> ident ident_expr.
+expr -> "-" expr .
+expr -> not expr .
+expr -> "[" expr_etoile_init "]" .
+expr -> "(" expr_init ")" .
+
+expr_prime -> binop expr  .
+
+expr_etoile_init -> .
+expr_etoile_init -> expr expr_etoile .
+expr_etoile -> "," expr expr_etoile .
+expr_etoile -> .
+
+binop -> "+" .
+binop -> "-" .
+binop -> "*" .
+binop -> "/" "/" .
+binop -> "%" .
+binop -> "<"  . 
+binop -> ">="  .
+binop -> ">"  . 
+binop -> "<="  . 
+binop -> "!=" .
+binop -> "==".
+binop -> or .
+binop -> and .
+
+const -> integer .
+const -> string .
+const -> True .
+const -> False .
+const -> None . 

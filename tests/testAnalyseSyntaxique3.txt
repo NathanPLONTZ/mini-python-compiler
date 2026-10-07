@@ -1,0 +1,15 @@
+def addition(a, b, c):
+    tmp=a+b+c
+    return tmp
+
+x = 5
+y = 10
+z = 20
+result = addition(x, y, z)
+
+if result >= 30:
+    print "Resultat eleve"
+else:
+    print "Resultat faible"
+
+print "Calcul termine"
